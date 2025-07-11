@@ -165,11 +165,11 @@ This project is licensed under the MIT License with attribution requirements. Yo
 
 ### Contact
 
-Website: www.bitsena.com.br
-Developer: www.fusionlabs.com.br
-Email: token@bitsena.com.br
-Telegram: t.me/BitsenaCommunity
-GitHub: https://github.com/Bitsena
+- Website: www.bitsena.com.br
+- Developer: www.fusionlabs.com.br
+- Email: token@bitsena.com.br
+- Telegram: t.me/BitsenaCommunity
+- GitHub: https://github.com/Bitsena
 
 ### Disclaimer
 
