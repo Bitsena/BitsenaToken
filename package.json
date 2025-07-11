@@ -1,0 +1,71 @@
+{
+    "name": "bitsena-token",
+    "version": "1.0.0",
+    "description": "Bitsena (BTS) - Bitcoin Lottery Utility Token on Binance Smart Chain",
+    "main": "index.js",
+    "scripts": {
+        "compile": "npx hardhat compile",
+        "test": "npx hardhat test",
+        "deploy:testnet": "npx hardhat run scripts/deploy.js --network bscTestnet",
+        "deploy:mainnet": "npx hardhat run scripts/deploy.js --network bscMainnet",
+        "verify:testnet": "npx hardhat verify --network bscTestnet $(grep BITSENA_TOKEN_ADDRESS .env | cut -d '=' -f2)",
+        "verify:vesting:testnet": "npx hardhat verify --network bscTestnet $(grep BITSENA_VESTING_ADDRESS .env | cut -d '=' -f2) $(grep BITSENA_TOKEN_ADDRESS .env | cut -d '=' -f2)",
+        "verify:mainnet": "npx hardhat verify --network bscMainnet $(grep BITSENA_TOKEN_ADDRESS .env | cut -d '=' -f2)",
+        "verify:vesting:mainnet": "npx hardhat verify --network bscMainnet $(grep BITSENA_VESTING_ADDRESS .env | cut -d '=' -f2) $(grep BITSENA_TOKEN_ADDRESS .env | cut -d '=' -f2)",
+        "prepare-verify": "npx hardhat run scripts/prepare.js",
+        "manager": "npx hardhat run scripts/manager.js",
+        "changeOwner": "npx hardhat run scripts/changeOwner.js",
+        "clean": "npx hardhat clean",
+        "node": "npx hardhat node",
+        "accounts": "npx hardhat accounts",
+        "lint": "solhint 'contracts/**/*.sol'"
+    },
+    "keywords": [
+        "bts",
+        "token",
+        "erc20",
+        "bsc",
+        "matic",
+        "smart",
+        "chain",
+        "lottery",
+        "bitcoin",
+        "bitsena"
+    ],
+    "author": "FusionLabs Brasil Ltda.",
+    "license": "MIT",
+    "devDependencies": {
+        "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+        "@nomicfoundation/hardhat-ethers": "^3.0.0",
+        "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+        "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+        "@nomicfoundation/hardhat-verify": "^2.0.0",
+        "@openzeppelin/contracts": "4.9.3",
+        "@typechain/ethers-v6": "^0.5.0",
+        "@typechain/hardhat": "^9.0.0",
+        "chai": "^4.3.7",
+        "dotenv": "^16.3.1",
+        "ethers": "^6.8.1",
+        "hardhat": "^2.19.0",
+        "hardhat-gas-reporter": "^1.0.9",
+        "solhint": "^4.0.0",
+        "solidity-coverage": "^0.8.5",
+        "typechain": "^8.3.0"
+    },
+    "dependencies": {
+        "solc": "^0.8.20"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Bitsena/BitsenaToken.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Bitsena/BitsenaToken/issues"
+    },
+    "homepage": "https://www.bitsena.com.br",
+    "private": true,
+    "readme": "# Bitsena Token (BTS)\n\nBitsena (BTS) é um token de utilidade para a plataforma de loteria Bitcoin.\n\n## Instalação\n\n```bash\nnpm install\n```\n\n## Uso\n\n### Compilar contratos\n```bash\nnpm run compile\n```\n\n### Implantar na testnet\n```bash\nnpm run deploy:testnet\n```\n\n### Implantar na mainnet\n```bash\nnpm run deploy:mainnet\n```\n\n### Verificar contratos na testnet\n```bash\nnpm run verify:testnet\nnpm run verify:vesting:testnet\n```\n\n### Verificar contratos na mainnet\n```bash\nnpm run verify:mainnet\nnpm run verify:vesting:mainnet\n```\n\n### Gerenciar membros da equipe\n```bash\nnpm run manager -- <comando> [argumentos] --network <network>\n```\n\n### Transferir propriedade\n```bash\nnpm run changeOwner -- <novoProprietario> <tipoContrato> --network <network>\n```\n\n### Preparar para verificação manual\n```bash\nnpm run prepare-verify\n```\n\n## Licença\n\nMIT\n"
+}
