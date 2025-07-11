@@ -144,17 +144,11 @@ npm run check-env
 The Bitsena ecosystem allocates 20% of all revenue to support children and adolescents with specific needs, including:
 
 - Autism Spectrum Disorder
-
 - Childhood cancer
-
 - Down Syndrome
-
 - Cerebral palsy
-
 - Rare diseases
-
 - Victims of abuse, kidnapping, and human trafficking
-
 - Children in situations of social vulnerability
 
 All donations are transparently recorded on the blockchain and publicly verifiable.
